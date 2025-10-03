@@ -13,7 +13,9 @@ A responsive portfolio website showcasing my professional experience, skills, an
 
 ## Deployment
 
-This site is deployed using GitHub Pages. You can view it at: [Your GitHub Pages URL]
+This site is deployed using GitHub Pages. You can view it at: [https://shyamajay.github.io/Shyam-Portfolio/](https://shyamajay.github.io/Shyam-Portfolio/)
+
+The site automatically deploys when changes are pushed to the `main` branch via GitHub Actions.
 
 ### Local Development
 
