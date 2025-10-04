@@ -624,74 +624,139 @@ section:not(:first-child) .section-heading {
 
 /* Mobile-specific styles */
 @media screen and (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
   /* Header */
   #body-header {
     height: auto;
-    padding: 1rem 0 3rem;
+    min-height: 60vh;
+    padding: 1rem 0;
+    background-attachment: scroll;
   }
 
   #name-social-container {
-    margin-top: 10vh;
+    margin-top: 20vh;
   }
 
   #my-name {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
   }
 
   .nav-menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
-    padding: 0 10px;
+    padding: 0.5rem;
   }
 
-  .nav-menu li {
-    font-size: 0.8rem;
-    margin: 0;
+  .horizontal-list li {
+    margin: 0.25rem 0.5rem;
   }
 
   .nav-menu li a {
-    padding: 5px 8px;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .social-icons li a i {
+    font-size: 1.2rem;
+    padding: 0.5rem;
   }
 
   /* About Section */
+  section {
+    padding: 2rem 1rem;
+  }
+
   #my-image {
-    height: 150px;
-    width: 150px;
-    margin-bottom: 1rem;
+    height: 200px;
+    width: 200px;
+    margin: 2rem 0;
   }
 
   #about-para {
-    width: 90%;
-    font-size: 0.95rem;
+    width: 100%;
+    max-width: 600px;
+    font-size: 1rem;
     line-height: 1.6;
-    margin: 1rem auto;
-    padding: 0 15px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: justify;
   }
 
   /* Skills */
   .skills-card {
-    padding: 0 10px;
-    margin: 0 auto;
     width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+  .skills-viewport {
+    margin: 0 -1rem;
   }
 
   .skill-tile {
-    flex: 0 0 calc(50% - 16px);
-    margin: 8px;
-    padding: 12px 8px;
+    flex: 0 0 calc(50% - 2rem);
+    margin: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 
   .skill-icon {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
   }
 
   .skill-name {
-    font-size: 0.8rem;
-    margin-top: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* Timeline Adjustments */
+  .timeline {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .timeline-box {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  /* Portfolio */
+  #portfolio-container {
+    padding: 1rem;
+  }
+
+  .portfolio-image-container {
+    margin: 1rem 0;
+  }
+
+  /* Contact Form */
+  #contact-form-container {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+
+  #contact-form button[type="submit"] {
+    padding: 0.75rem 2rem;
+    margin: 1rem auto;
+    display: block;
+    width: auto;
   }
 
   /* Portfolio */
