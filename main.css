@@ -626,27 +626,72 @@ section:not(:first-child) .section-heading {
 @media screen and (max-width: 480px) {
   /* Header */
   #body-header {
-    height: 55vh;
+    height: auto;
+    padding: 1rem 0 3rem;
+  }
+
+  #name-social-container {
+    margin-top: 10vh;
   }
 
   #my-name {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 10px;
   }
 
   .nav-menu li {
-    font-size: 0.75rem;
-    margin: 0 4px;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  .nav-menu li a {
+    padding: 5px 8px;
   }
 
   /* About Section */
+  #my-image {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 1rem;
+  }
+
   #about-para {
     width: 90%;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 1rem auto;
+    padding: 0 15px;
   }
 
   /* Skills */
+  .skills-card {
+    padding: 0 10px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
   .skill-tile {
-    flex: 0 0 calc(50% - 20px);
+    flex: 0 0 calc(50% - 16px);
+    margin: 8px;
+    padding: 12px 8px;
+  }
+
+  .skill-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skill-name {
+    font-size: 0.8rem;
+    margin-top: 8px;
   }
 
   /* Portfolio */
