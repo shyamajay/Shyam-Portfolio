@@ -12,28 +12,35 @@
   </head>
   <body>
     <header id="body-header">
-      <nav>
-        <ul class="horizontal-list text-center nav-menu">
+      <nav class="main-nav">
+        <!-- Mobile menu toggle -->
+        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </div>
+        
+        <ul class="horizontal-list text-center nav-menu" id="nav-menu">
           <li>
-            <a href="#"> Home </a>
+            <a href="#" class="nav-link"> Home </a>
           </li>
           <li>
-            <a href="#about"> About </a>
+            <a href="#about" class="nav-link"> About </a>
           </li>
           <li>
-            <a href="#skills"> Skills </a>
+            <a href="#skills" class="nav-link"> Skills </a>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <a href="#experience" class="nav-link">Experience</a>
           </li>
           <li>
-            <a href="#education">Education</a>
+            <a href="#education" class="nav-link">Education</a>
           </li>
           <li>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#portfolio" class="nav-link">Portfolio</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact" class="nav-link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -546,5 +553,6 @@
     <script src="js/skills-scroller.js"></script>
     <script src="js/resume-cta.js"></script>
     <script src="js/contact-form.js"></script>
+    <script src="js/mobile-navigation.js"></script>
   </body>
 </html>
