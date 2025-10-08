@@ -349,12 +349,11 @@ section:not(:first-child) .section-heading {
 }
 
 .skill-icon {
-  width: clamp(32px, 40%, 48px);
+  background: linear-gradient(to right, rgba(255,255,255,0.95), transparent);
   height: clamp(32px, 40%, 48px);
   color: #2857a4;
   margin-bottom: 1rem;
 }
-
 .skill-name {
   font-size: clamp(12px, 1.5vw, 14px);
   color: #333333;
@@ -376,7 +375,6 @@ section:not(:first-child) .section-heading {
     animation: none;
     transform: translateX(0);
   }
-
   .skill-tile:hover {
     transform: none;
   }
@@ -398,18 +396,20 @@ section:not(:first-child) .section-heading {
 
 .timeline {
   position: relative;
-  width: 75%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
 .timeline-box {
-  padding: 5px;
-  width: 40%;
-  min-height: 150px;
+  padding: 1rem 1.5rem;
+  width: 48%;
+  min-height: 120px;
   position: relative;
-  left: 5%;
-  text-align: right;
+  box-sizing: border-box;
 }
-
 .timeline-box::after {
   content: "";
   position: absolute;
@@ -422,15 +422,19 @@ section:not(:first-child) .section-heading {
 }
 
 .timeline-box:nth-child(2n) {
-  left: 53%;
+  float: right;
+  clear: both;
 }
 
-.timeline-box:nth-child(2n + 1)::after {
-  right: -11.8%;
+.timeline-box:nth-child(2n + 1) {
+  float: left;
+  clear: both;
 }
 
-.timeline-box:nth-child(2n)::after {
-  left: -9%;
+.timeline-box::after {
+  /* center marker for each box; absolute positioned relative to box */
+  right: auto;
+  left: -8px;
 }
 
 .timeline-container {
@@ -784,17 +788,10 @@ section:not(:first-child) .section-heading {
   }
 
   /* Contact Form - removed conflicting styles, handled above */
-  }
-
-  #contact-form button[type="submit"] {
-    font-size: 0.9rem;
-    margin-left: 25%;
-  }
 
   .social-icons li a i {
     font-size: 1rem;
   }
-}
 
 /* Contact Form */
 
@@ -1393,34 +1390,80 @@ button:focus {
     transition: width 0.8s ease-in-out;
   }
 
-  /* Better timeline for mobile */
+  /* Better timeline for mobile - consolidated */
   .timeline {
     width: 100%;
     position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 0;
+    box-sizing: border-box;
   }
 
   #timeline-divider {
-    left: 20px;
+    left: 32px;
     border-color: #2857a4;
+    top: 5%;
+    height: 90%;
   }
 
   .timeline-box {
-    margin-left: 50px;
+    margin: 1.2rem 0;
     text-align: left;
     background: rgba(255, 255, 255, 0.03);
     border-left: 3px solid #2857a4;
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-radius: 0 10px 10px 0;
+    clear: both;
+    position: relative;
+    box-sizing: border-box;
   }
 
   .timeline-box::after {
-    left: -8px;
-    background-color: #2857a4;
-    border: 3px solid white;
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 20px;
     width: 12px;
     height: 12px;
+    background-color: #2857a4;
+    border: 3px solid white;
+    border-radius: 50%;
   }
-}
+
+  /* On wider screens, show alternating left/right boxes */
+  @media screen and (min-width: 900px) {
+    .timeline {
+      display: block;
+    }
+
+    .timeline-box {
+      width: 48%;
+    }
+
+    .timeline-box:nth-child(odd) {
+      float: left;
+      margin-right: 4%;
+      border-left: 0;
+      border-right: 3px solid #2857a4;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .timeline-box:nth-child(odd)::after {
+      left: auto;
+      right: -22px;
+    }
+
+    .timeline-box:nth-child(even) {
+      float: right;
+      margin-left: 4%;
+      text-align: right;
+    }
+
+    .timeline-box:nth-child(even)::after {
+      left: -22px;
+    }
+  }
 
 /* ====== TOUCH DEVICE OPTIMIZATIONS ====== */
 
