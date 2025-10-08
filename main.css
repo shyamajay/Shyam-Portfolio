@@ -95,7 +95,10 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 20px;
+  justify-content: center;
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 section:nth-child(2n) {
@@ -253,7 +256,8 @@ section:not(:first-child) .section-heading {
 /*Skills Section*/
 
 #skills {
-  padding: 2rem 0;
+  padding: 3rem 0;
+  width: 100%;
 }
 
 #skills .section-heading span {
@@ -261,13 +265,16 @@ section:not(:first-child) .section-heading {
 }
 
 .skills-card {
-  width: 90%;
+  width: 95%;
   max-width: 1200px;
   margin: 2rem auto;
   background: #ffffff;
   border-radius: 16px;
-  padding: 2rem 0;
+  padding: 3rem 2rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .skills-viewport {
@@ -645,7 +652,7 @@ section:not(:first-child) .section-heading {
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
     padding: 0 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   /* Enhanced Mobile Navigation */
@@ -743,25 +750,7 @@ section:not(:first-child) .section-heading {
     margin: 1rem 0;
   }
 
-  /* Contact Form */
-  #contact-form-container {
-    width: 100%;
-    padding: 1rem;
-  }
-
-  #contact-form input,
-  #contact-form textarea {
-    padding: 0.75rem;
-    margin: 0.5rem 0;
-    font-size: 1rem;
-  }
-
-  #contact-form button[type="submit"] {
-    padding: 0.75rem 2rem;
-    margin: 1rem auto;
-    display: block;
-    width: auto;
-  }
+  /* Contact Form - removed conflicting styles, handled above */
 
   /* Portfolio */
   .portfolio-image-container {
@@ -794,14 +783,7 @@ section:not(:first-child) .section-heading {
     font-size: 28px;
   }
 
-  /* Contact Form */
-  #contact-form-container {
-    width: 90%;
-  }
-
-  #contact-form input,
-  #contact-form textarea {
-    font-size: 0.95rem;
+  /* Contact Form - removed conflicting styles, handled above */
   }
 
   #contact-form button[type="submit"] {
@@ -829,16 +811,24 @@ section:not(:first-child) .section-heading {
 }
 
 #contact-form {
-  margin-left: 20%;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
 }
 
 #contact-container {
   display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
 #my-details-container {
-  width: 35%;
-  margin-left: 6%;
+  flex: 1;
+  max-width: 400px;
 }
 
 #my-details-container h3 {
@@ -848,7 +838,8 @@ section:not(:first-child) .section-heading {
 }
 
 #contact-form-container {
-  width: 50%;
+  flex: 1;
+  max-width: 500px;
 }
 
 #my-details-container p {
@@ -916,16 +907,16 @@ section:not(:first-child) .section-heading {
 
 #contact-form input,
 #contact-form textarea {
-  max-width: 90%;
-  margin: 15px;
-  padding: 4px 10px;
+  width: 100%;
+  margin: 15px 0;
+  padding: 10px 0;
   border: 0px solid transparent;
   border-bottom: 2px solid white;
   color: #d9dcdd;
   background: transparent;
-  width: 90%;
   line-height: 1.6;
   font-size: 1.05rem;
+  box-sizing: border-box;
 }
 
 #contact-form input::placeholder,
@@ -937,8 +928,7 @@ section:not(:first-child) .section-heading {
   background: transparent;
   font-size: 0.95rem;
   border: 2px solid white;
-  margin-top: 5%;
-  margin-left: 35%;
+  margin: 2rem auto 0;
   border-radius: 25px;
   color: white;
   font-family: sans-serif;
@@ -948,6 +938,8 @@ section:not(:first-child) .section-heading {
   padding: 0.8em 2em;
   text-transform: uppercase;
   transition: all 0.3s ease;
+  display: block;
+  cursor: pointer;
   cursor: pointer;
 }
 
@@ -1079,17 +1071,17 @@ button:focus {
   #my-name {
     font-size: 1.8rem;
   }
-  
+
   .nav-menu li a {
     font-size: 0.8rem;
     padding: 0.4rem;
   }
-  
+
   .skill-tile {
     flex: 0 0 100%;
     margin: 0.5rem 0;
   }
-  
+
   .portfolio-image-container {
     height: 150px;
   }
@@ -1103,7 +1095,7 @@ button:focus {
     background-size: cover;
     background-position: center;
   }
-  
+
   /* Touch-friendly navigation */
   .nav-menu li a {
     padding: 0.8rem 1rem;
@@ -1117,12 +1109,12 @@ button:focus {
     align-items: center;
     justify-content: center;
   }
-  
+
   .nav-menu li a:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
   }
-  
+
   /* Improved social icons for touch */
   .social-icons li a i {
     font-size: 1.4rem;
@@ -1137,7 +1129,7 @@ button:focus {
     align-items: center;
     justify-content: center;
   }
-  
+
   .social-icons li a i:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: scale(1.1);
@@ -1149,17 +1141,17 @@ button:focus {
   #body-header {
     min-height: 65vh;
   }
-  
+
   #my-name {
     font-size: 2.5rem;
   }
-  
+
   /* Better skills layout for medium screens */
   .skill-tile {
     flex: 0 0 calc(50% - 1rem);
     margin: 0.5rem;
   }
-  
+
   /* Portfolio 2-column layout */
   .portfolio-image-container {
     flex: 0 0 calc(50% - 1rem);
@@ -1167,7 +1159,7 @@ button:focus {
     height: 180px;
     margin: 0.5rem;
   }
-  
+
   /* Timeline improvements */
   .timeline-box {
     width: 95%;
@@ -1186,21 +1178,21 @@ button:focus {
     flex: 0 0 calc(33.33% - 1rem);
     max-width: calc(33.33% - 1rem);
   }
-  
+
   /* Skills in 3 columns */
   .skill-tile {
     flex: 0 0 calc(33.33% - 1rem);
   }
-  
+
   /* Improved timeline for tablets */
   .timeline-box {
     width: 45%;
   }
-  
+
   .timeline-box:nth-child(2n) {
     left: 50%;
   }
-  
+
   .timeline-box:nth-child(2n + 1) {
     left: 5%;
     text-align: right;
@@ -1214,6 +1206,44 @@ button:focus {
     display: flex;
   }
   
+  /* Fix section alignment for mobile */
+  section {
+    padding: 2rem 1rem;
+    width: 100%;
+  }
+  
+  /* Mobile contact form fixes */
+  #contact-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  #my-details-container,
+  #contact-form-container {
+    width: 100%;
+    max-width: none;
+  }
+  
+  #contact-form {
+    margin: 0;
+    max-width: none;
+    width: 100%;
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px 0;
+  }
+  
+  #contact-form button[type="submit"] {
+    width: 100%;
+    margin: 1.5rem 0 0;
+    padding: 1rem;
+  }
+
   /* Hide/Show navigation menu */
   .nav-menu {
     position: fixed;
@@ -1231,17 +1261,17 @@ button:focus {
     padding: 2rem;
     box-sizing: border-box;
   }
-  
+
   .nav-menu.active {
     right: 0;
   }
-  
+
   .nav-menu li {
     margin: 1rem 0;
     width: 100%;
     text-align: center;
   }
-  
+
   .nav-menu li a {
     display: block;
     padding: 1rem 2rem;
@@ -1252,7 +1282,7 @@ button:focus {
     width: 100%;
     box-sizing: border-box;
   }
-  
+
   .nav-menu li a:hover {
     background: rgba(40, 87, 164, 0.8);
     transform: translateX(10px);
@@ -1262,65 +1292,20 @@ button:focus {
   section {
     padding: 3rem 1rem;
   }
-  
+
   .section-heading {
     margin-bottom: 2rem;
     font-size: 1.8rem;
   }
-  
-  /* Better form styling */
-  #contact-form input,
-  #contact-form textarea {
-    width: 100%;
-    padding: 1rem;
-    margin: 0.5rem 0;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.05);
-    color: #333;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-  }
-  
-  #contact-form input:focus,
-  #contact-form textarea:focus {
-    border-color: #2857a4;
-    background: rgba(255, 255, 255, 0.1);
-    outline: none;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  #contact-form button[type="submit"] {
-    width: 100%;
-    padding: 1rem;
-    margin: 1rem 0;
-    background: linear-gradient(45deg, #2857a4, #3a6bc4);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    min-height: 50px;
-  }
-  
-  #contact-form button[type="submit"]:hover {
-    background: linear-gradient(45deg, #1e4080, #2857a4);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Improved about section */
+
+  /* Contact form styles handled above in mobile-specific section */  /* Improved about section */
   #about-para {
     font-size: 1.1rem;
     line-height: 1.7;
     padding: 0 1rem;
     text-align: left;
   }
-  
+
   /* Better image handling */
   #my-image {
     width: 180px;
@@ -1329,7 +1314,7 @@ button:focus {
     border: 4px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   }
-  
+
   /* Mobile-optimized portfolio grid */
   #portfolio-container {
     display: flex;
@@ -1337,7 +1322,7 @@ button:focus {
     gap: 1.5rem;
     padding: 1rem;
   }
-  
+
   .portfolio-image-container {
     width: 100%;
     height: 220px;
@@ -1347,17 +1332,20 @@ button:focus {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
   }
-  
+
   .portfolio-image-container:active {
     transform: scale(0.98);
   }
-  
+
   /* Enhanced skill tiles for mobile */
   .skills-card {
-    padding: 1.5rem 1rem;
+    width: 95%;
+    padding: 2rem 1rem;
+    margin: 1rem auto;
   }
   
   .skills-viewport {
+    width: 100%;
     overflow-x: auto;
     padding: 1rem 0;
     -webkit-overflow-scrolling: touch;
@@ -1382,18 +1370,16 @@ button:focus {
   .skill-tile:active {
     transform: scale(0.95);
     background: rgba(255, 255, 255, 0.12);
-  }
-  
-  /* Smooth scrolling for mobile navigation */
+  }  /* Smooth scrolling for mobile navigation */
   html {
     scroll-behavior: smooth;
   }
-  
+
   /* Hide horizontal scrollbar */
   body {
     overflow-x: hidden;
   }
-  
+
   /* Improved skill progress bars for mobile */
   .skill-progress {
     margin: 1rem 0;
@@ -1401,23 +1387,23 @@ button:focus {
     border-radius: 10px;
     padding: 0.5rem;
   }
-  
+
   .skill-progress > div {
     border-radius: 8px;
     transition: width 0.8s ease-in-out;
   }
-  
+
   /* Better timeline for mobile */
   .timeline {
     width: 100%;
     position: relative;
   }
-  
+
   #timeline-divider {
     left: 20px;
     border-color: #2857a4;
   }
-  
+
   .timeline-box {
     margin-left: 50px;
     text-align: left;
@@ -1426,7 +1412,7 @@ button:focus {
     padding: 1.5rem;
     border-radius: 0 10px 10px 0;
   }
-  
+
   .timeline-box::after {
     left: -8px;
     background-color: #2857a4;
@@ -1466,19 +1452,31 @@ body.loaded {
     transform: translateY(30px);
     transition: all 0.6s ease;
   }
-  
+
   section.animate-in {
     opacity: 1;
     transform: translateY(0);
   }
-  
+
   /* Stagger animation delays */
-  section:nth-child(1) { transition-delay: 0.1s; }
-  section:nth-child(2) { transition-delay: 0.2s; }
-  section:nth-child(3) { transition-delay: 0.3s; }
-  section:nth-child(4) { transition-delay: 0.4s; }
-  section:nth-child(5) { transition-delay: 0.5s; }
-  section:nth-child(6) { transition-delay: 0.6s; }
+  section:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  section:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  section:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  section:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+  section:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+  section:nth-child(6) {
+    transition-delay: 0.6s;
+  }
 }
 
 /* ====== ACCESSIBILITY IMPROVEMENTS ====== */
@@ -1509,7 +1507,7 @@ body.loaded {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
+
   section {
     transform: none !important;
     opacity: 1 !important;
