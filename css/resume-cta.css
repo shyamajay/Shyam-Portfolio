@@ -1,6 +1,10 @@
 .resume-cta {
   margin-top: 2rem;
-  text-align: left;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .resume-buttons {
@@ -15,6 +19,13 @@
     flex-direction: row;
     justify-content: flex-start;
     gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-buttons {
+    width: 100%;
+    align-items: center;
   }
 }
 
